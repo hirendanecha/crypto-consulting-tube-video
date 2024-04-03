@@ -80,9 +80,9 @@ export function app(): express.Express {
         var seo: any = {
           title: 'cryptoconsulting Tube',
           description:
-            'Private video consultations with Naturopathic Doctors and Holistic Healers from around the world. Social Discussion on how to heal various ailments.',
+            'Talk face-to-face with top crypto currency consultants around the world Cryptocurrency Social Network.',
           image:
-            'https://video.cryptoconsulting.tube/assets/banner/HT-banner-default.png',
+            'https://video.cryptoconsulting.tube/assets/Crypto-Consulting-Banner.jpg',
           site: 'https://video.cryptoconsulting.tube/',
           url: 'https://video.cryptoconsulting.tube' + params,
           keywords: 'cryptoconsulting Tube',
