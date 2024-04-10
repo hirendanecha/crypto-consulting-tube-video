@@ -348,7 +348,7 @@ export class VideoPostModalComponent implements OnInit, AfterViewInit {
         this.toastService.warring('please upload only mp4 files');
       }
     }else{
-      this.toastService.warring('Maximum video size allowed is 10 GB.');
+      this.toastService.warring('Maximum video size allowed is 2 GB.');
       this.fileSizeError = true
     }
   }
