@@ -22,6 +22,7 @@ export class VideoCardComponent implements OnInit, AfterViewInit {
   isPlay = false;
   postId!: number | null;
   profileid: number;
+  currentPlayingVideo: any = null;
 
   @Input('videoData') videoData: any = [];
   constructor(
@@ -44,12 +45,16 @@ export class VideoCardComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {}
 
   playvideo(video: any): void {
+    if (this.currentPlayingVideo) {
+      const currentPlayer = jwplayer('jwVideo-' + this.currentPlayingVideo.id);
+      currentPlayer.pause(true);
+    }
     this.isPlay = false;
     const player = jwplayer('jwVideo-' + video.id);
     player.setup({
       file: video.streamname,
       image: video?.thumbfilename,
-      mute: true,
+      mute: false,
       autostart: false,
       volume: 90,
       height: '220px',
